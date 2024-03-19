@@ -1,14 +1,12 @@
-# Welcome to Chainlit! 🚀🤖
+# MenstBot: Your Menstrual Health Chatbot
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+MenstBot is a chatbot designed to provide information and support regarding menstrual health. Powered by Llama2, MenstBot offers a user-friendly interface for users to ask questions, seek advice, and access relevant resources related to menstruation.
 
-## Useful Links 🔗
+## Features
+MenstBot can answer a wide range of menstruation-related queries, providing accurate and reliable information. MenstBot is here to empower individuals with knowledge and support regarding menstrual health. Try it out today and experience a new level of accessibility to menstrual health information.
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/k73SQ3FyUh) to ask questions, share your projects, and connect with other developers! 💬
+## How to Use
 
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
+1. Send your menstruation-related query to the bot.
+2. Receive a response with information and, if available, links to relevant resources.
 
-## Welcome screen
-
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.

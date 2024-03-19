@@ -51,7 +51,7 @@ def load_llm():
 def qa_bot():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
                                        model_kwargs={'device': 'cpu'})
-    db = FAISS.load_local(DB_FAISS_PATH, embeddings,allow_dangerous_deserialization=True)
+    db = FAISS.load_local(DB_FAISS_PATH, embeddings, allow_dangerous_deserialization=True)
     llm = load_llm()
     qa_prompt = set_custom_prompt()
     qa = retrieval_qa_chain(llm, qa_prompt, db)
@@ -82,14 +82,14 @@ async def main(message: cl.Message):
         stream_final_answer=True, answer_prefix_tokens=["FINAL", "ANSWER"]
     )
     cb.answer_reached = True
-    res = await chain.acall(message.content, callbacks=[cb])
+    # res = await chain.acall(message.content, callbacks=[cb])
+    res = await chain.acall(message.content)
     answer = res["result"]
-    sources = res["source_documents"]
+    # sources = res["source_documents"]
 
-    if sources:
-        answer += f"\nSources:" + str(sources)
-    else:
-        answer += "\nNo sources found"
+    # if sources:
+    #     answer += f"\nSources:" + str(sources)
+    # else:
+    #     answer += "\nNo sources found"
 
     await cl.Message(content=answer).send()
-
